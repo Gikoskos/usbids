@@ -14,7 +14,8 @@ char *filename = "usb.ids";
 /*getline taken from Will Hartung's implementation and made a few changes to work with NULL strings; see:
 * http://stackoverflow.com/questions/735126/are-there-alternate-implementations-of-gnu-getline-interface 
 * cause I was bored to make my own :P*/
-size_t getline(char **lineptr, size_t *n, FILE *stream) {
+size_t getline(char **lineptr, size_t *n, FILE *stream)
+{
 	char *bufptr = NULL;
 	char *p = bufptr;
 	size_t size;
