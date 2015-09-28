@@ -1,6 +1,6 @@
 # The massive USB.IDS list in C
 
-The usb.ids list in C struct array format.
+The usb.ids list from [this link](http://www.linux-usb.org/usb.ids) as a structure array for use in C programs.
 ##This doesn't include the USB device classes, subclasses, protocols and terminal types that the list contains.
 
 
