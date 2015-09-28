@@ -108,7 +108,6 @@ int main (int argc, char *argv[])
 				device[i-7] = curr_line[i];
 			}
 			device[strlen(curr_line) - 8] = '\0';
-			if (strchr()
 			printf("{ 0x%s, 0x%s, \"%s\", \"%s\"}, \n", tempID, dID, vendor, device);
 			dev_count++;
 		}
@@ -119,6 +118,8 @@ int main (int argc, char *argv[])
 		next_line = NULL;
 		getline(&next_line, NULL, ids_fd);
 	}
+	if (next_line) free(next_line);
+	if (curr_line) free(curr_line);
 	fclose(ids_fd);
 }
 
