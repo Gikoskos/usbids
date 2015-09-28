@@ -15,8 +15,8 @@ typedef struct {
 } UsbDevStruct;
 
 /* About 16687 entries; when Device is NULL, only the Vendor is known for that device
- * for devices that have no Device name (NULL) the DeviceID is 0xABCD, so ignore it 
- * because there are other devices that have a Device name and 0xABCD DeviceID*/
+ * for those devices (that have no Device name (NULL)) the DeviceID is 0xABCD, so just 
+ * ignore it because there are other devices that have both a Device name and 0xABCD DeviceID*/
 UsbDevStruct UsbList[] = 
 {
 	{ 0x0001, 0x7778, "Fry's Electronics", "Counterfeit flash drive [Kingston]"}, 
