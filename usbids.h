@@ -17,4 +17,7 @@ typedef struct {
 extern UsbDevStruct UsbList[];
 extern size_t UsbLength;
 
+UsbDevStruct *UsbFind(long vendor, long device);
+int UsbListIsSorted(void);
+
 #endif
