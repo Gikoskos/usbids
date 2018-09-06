@@ -13,7 +13,7 @@ int main(void)
 	}
 	while (scanf("%9lx %9lx", &vendor, &device) == 2)
 		if (vendor > 0xffff || device > 0xffff
-		 || (p = UsbFind(vendor, device)) == NULL)
+		 || (p = UsbListFind(vendor, device)) == NULL)
 			fprintf(stderr, "(%ld, %ld): unknown device\n", vendor,
 			        device);
 		else
