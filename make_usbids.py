@@ -111,16 +111,16 @@ void {usbid[arrayname]}RunTests(void)
         tmpDev = {usbid[arrayname]}Find({usbid[arrayname]}[i].{usbid[vendorid]}, {usbid[arrayname]}[i].{usbid[deviceid]});
 
         assert(tmpDev);
-        assert(tmpDev->Vendor);
+        assert(tmpDev->{usbid[vendorname]});
         assert(tmpDev->{usbid[vendorid]} == {usbid[arrayname]}[i].{usbid[vendorid]});
         assert(tmpDev->{usbid[deviceid]} == {usbid[arrayname]}[i].{usbid[deviceid]});
 
-        assert(strcmp(tmpDev->{usbid[vendorname]}, {usbid[arrayname]}[i].{usbid[vendorname]}));
+        assert(!strcmp(tmpDev->{usbid[vendorname]}, {usbid[arrayname]}[i].{usbid[vendorname]}));
 
         if (!tmpDev->{usbid[devicename]}) {{
             assert(tmpDev->{usbid[devicename]} == {usbid[arrayname]}[i].{usbid[devicename]});
         }} else {{
-            assert(strcmp(tmpDev->{usbid[devicename]}, {usbid[arrayname]}[i].{usbid[devicename]}));
+            assert(!strcmp(tmpDev->{usbid[devicename]}, {usbid[arrayname]}[i].{usbid[devicename]}));
         }}
     }}
 }}
